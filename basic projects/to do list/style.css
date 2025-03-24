@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Soft light blue-gray background */
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 60%;
+    border: 1px solid #ccc;
+    padding: 10px 5px;
+    background-color: #9d4f2e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  #todo-input {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    width: 80%; /* Make input full width */
+    font-size: 16px;
+  }
+  
+  #addBtn {
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: #be684a;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+  }
+  
+  #add:hover {
+    background-color: #9d4f2e; /* Darker shade for hover effect */
+  }
+  
+  #todo-list {
+    display: flex;
+    flex-direction: column; /* Arrange tasks vertically */
+    justify-content: flex-start;
+    width: 100%;
+    height: 70%; /* Fixed height for todo list */
+    gap: 10px;
+    overflow-y: auto;
+    padding-right: 10px; /* Optional: Add some padding to avoid scrollbars touching edges */
+  }
+  
+  .todo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Width for the task element */
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(29, 20, 20, 0.1); /* Subtle shadow for task elements */
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .todo:hover {
+    background-color: #e9e9e9; /* Light background on hover */
+  }
+  
+  .todo i {
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  
+  .todo i:hover {
+    color: #9d4f2e; /* Darker color for remove icon hover */
+  }
+  
+
