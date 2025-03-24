@@ -61,8 +61,8 @@ class ShowToDoList {
 const showtodolist = new ShowToDoList();
 //Evenet listener to "Add" button and captures user input and display  the new todo item in list.
 addBtn.addEventListener("click", () => {
-  const tododecription = document.getElementById("todo-input").value;
-  if (tododecription.trim()) {
+  const tododescription = document.getElementById("todo-input").value;
+  if (tododescription.trim()) {
     const todo = new Todo(tododecription);
     todomanager.addToDo(todo);
     showtodolist.displayList(todo);
