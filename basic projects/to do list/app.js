@@ -12,8 +12,8 @@ class Todo {
   }
 }
 
-//taskmanager class:adds and mananges mutiply todo in array
-class TodoManager {
+//taskmanager class:adds and manange multiply todo in array
+class TaskManager {
   constructor() {
     this.todos = [];
   }
@@ -21,8 +21,10 @@ class TodoManager {
     this.todos.push(todo);
   }
 }
-const todomanager = new TodoManager();
+const TaskManager = new TaskManager();
 
+
+//ToDoUI  class :manages the creation and interaction  of todo list  elmements in UI
 class TodoUI {
   static createElement(todo) {
     let todoElement = document.createElement("div");
@@ -49,8 +51,9 @@ class TodoUI {
   }
 }
 
-//class TodoUl:diplay to do list in UI
-class ShowToDoList {
+
+//class TodoUl:diplay todo list in UI
+class ToDoListDisplay {
   displayList(todo) {
     let todoElement = TodoUI.createElement(todo);
     let removebtn = TodoUI.createRemoveButton(todoElement);
@@ -58,13 +61,13 @@ class ShowToDoList {
     todoList.append(todoElement);
   }
 }
-const showtodolist = new ShowToDoList();
+const ToDoListDisplay = new ToDoListDisplay();
 //Evenet listener to "Add" button and captures user input and display  the new todo item in list.
 addBtn.addEventListener("click", () => {
   const tododecription = document.getElementById("todo-input").value;
   if (tododecription.trim()) {
     const todo = new Todo(tododecription);
-    todomanager.addToDo(todo);
-    showtodolist.displayList(todo);
+    TaskManager.addToDo(todo);
+    ToDoListDisplay.displayList(todo);
   }
 });
