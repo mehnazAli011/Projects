@@ -1,0 +1,106 @@
+/* Reset margin, padding, and box-sizing for consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles to center the calculator on the page */
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:black;
+  }
+  
+  /* Container for the calculator */
+  #calculator-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  /* Styling for the input element */
+  #inputEl {
+    width: 100%;
+    padding: 15px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+  }
+  
+  /* Container for the buttons */
+  #btn-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for buttons */
+    grid-gap: 10px;
+    width: 100%;
+  }
+  
+  /* General button styles */
+  button {
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+  /* Hover and active states for buttons */
+  button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Special styles for the 'delete' and 'equal' buttons */
+  #delete {
+    background-color: #ff6f61;
+    color: white;
+  }
+  
+  #delete:hover {
+    background-color: #e04e3b;
+  }
+  
+  #equalBtn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  #equalBtn:hover {
+    background-color: #45a049;
+  }
+  #clearBtn{
+      background: yellow;
+  }
+  
+  
+  /* Add some space below the input field for a better look */
+  #btn-container {
+    margin-top: 20px;
+  }
+  #equalBtn {
+    width: 450%;
+    font-size: xx-large
+    
+  }
+  
